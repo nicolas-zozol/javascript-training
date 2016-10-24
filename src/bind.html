@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bind with Underscore</title>
+
+
+</head>
+<body>
+
+<h1>function.bind()</h1>
+</body>
+
+
+<script>
+
+
+    var func = function(greeting){ return greeting + ': ' + this.name };
+
+
+    boundFunc = func.bind( {name: 'moe'});
+    var result = func("Hello");
+
+    console.log(result);
+
+    console.log("*********");
+
+
+
+    function User() {
+    }
+    User.prototype = {
+        name : "Jimmy Brand",
+        playWith : function (friendPlay){
+
+            console.log('first call : this is : ', this);
+            return friendPlay();
+        }
+    };
+
+    function Friend(){
+
+    }
+
+    Friend.prototype = {
+        name : "JO Bar Team",
+        play : function () {
+            console.log('second call : this is : ', this);
+            return this.name;
+        }
+    };
+
+
+    var x=new User();
+    var y = new Friend();
+
+
+    console.log("x.playWith(y) : =>", x.playWith(y.play));
+    var boundFunction = y.play.bind(y);  // We create a new function that keeps being bound
+    console.log('after binding');
+    console.log("x.playWith(y) : =>", x.playWith(boundFunction));
+
+
+//____>>> Keep
+
+
+
+</script>
+
+</html>
