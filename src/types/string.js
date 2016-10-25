@@ -46,3 +46,13 @@ console.log('y : ', moreStrict);
 //Substring (index 1 index 2,"string")
 // copy a string of size="index 2" of the "string" from the letter of index1.
 
+var str = "Je NE ComprenD RIEN a ce que je Dois Faire";
+var res = str.toUpperCase(); // met lettre en majuscule si elles sont en miniscule sinon les laisse en majuscule (cf table ASCII)
+console.log(res);
+
+var str = "Je NE ComprenD RIEN a ce que je Dois Faire";
+var res = str.toLowerCase(); // met lettre en minuscule si elles sont en majuscules sinon les laisse en mini (cf table ASCII)
+console.log(res);
+
+// trim() enleve tous les espaces avant et apres la chaine de caractères.
+
