@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Starting JS</title>
-
-
 </head>
 <body>
 
-<h1> Hello Javascript</h1>
-
-<p> You are so nice !</p>
-
+<h1>hello javascript</h1>
+<p>you are so nice!</p>
+<p> </p>
 </body>
 
 <script type="text/javascript" src="http://underscorejs.org/underscore.js">
+</script>
+
+<script type="text/javascript">
+    alert("hello javascript");
 </script>
 
 <script type="text/javascript">
@@ -25,17 +26,17 @@
     console.log(group);
     console.log(_.max(array));
 </script>
-
-
 <script type="text/javascript">
-    var x=Number(prompt("Entrez un nombre positif :"));
-    var result=1;
-  function factoriel(x){
-    for(var i=1;i<=x;i++){
-        result=result*i;}
-    return result;
-   };
-    console.log('le factoriel de '+x+' est '+factoriel(x));
-</script>
+function factoriel(x) {
+;
+    var result = 1;
 
+    for (var i = 1; i < x + 1; i++) {
+        result *= i;
+    }
+    return result;
+}
+console.log(factoriel());
+
+</script>
 </html>
