@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Displaying an amazing work</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<h1>Connected users</h1>
+<section class="users">
+
+</section>
+<h1> Rechercher des commentaires comportant le mot: </h1>
+
+<form onsubmit="displaySearchValue(); return false;">
+    <input type="search" class="search">
+    <button type="button">
+        Search
+    </button>
+</form>
+
+<section class="search">
+</section>
+
+<h2>et la c'est fini h2</h2>
+
+
 </body>
+<script type="text/javascript" src="work.js"></script>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="jQuery-event.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+
+<script type="text/javascript">
+//    const contents = search('it');
+//    contents.forEach(function (content) {
+//        const node = document.createTextNode(content);
+//        document.querySelector('body').appendChild(node);
+//    })
+</script>
 </html>
