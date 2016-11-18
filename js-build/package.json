@@ -1,0 +1,23 @@
+{
+  "name": "@marievincent/js-build",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/program/creation.js -o index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mega",
+    "build",
+    "forge"
+  ],
+  "author": "Nicolas",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.1.1"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
