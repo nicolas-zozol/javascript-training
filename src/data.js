@@ -66,7 +66,7 @@ var topics = [
         },
         comments: [
             {
-                id: 4,
+                id: 42,
                 user: {
                     admin: true,
                     id: 6,
@@ -88,7 +88,8 @@ var topics = [
                     name: "Leonard",
                     statement: "Star Trek rocks"
                 },
-                content: "What ? These guys are stupid !"
+                content: "What ? These guys are stupid !",
+                tags:['violence']
             },
             {
                 id: 6,
@@ -199,7 +200,7 @@ var topics = [
                     email: "sheldon@robusta.io",
                     name: "Sheldon"
                 },
-                content: "And it is a bit <strong>violent</strong> <script type='text/javascript'>alert('you are fired!')</script>"
+                content: "And it is a bit <strong>violent</strong> <script type='text/javascript'>alert('Go Away !')</script>"
             }
         ],
         tags: [
