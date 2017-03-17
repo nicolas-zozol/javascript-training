@@ -61,6 +61,6 @@ console.log('Penny Ids : ', pennyIds);
 // 1 - All Comment contents from Sheldon
 // 2 - All topic Ids with more than 4 comments
 // 3 - All Comment contents ordered by length DESC
-// 4 - All user names that are tagged with a ‘fun' or ‘violence' tag
+// 4 - All user names that are tagged with a ‘fun' or ‘violence' tag : from topic or Comment
 // 5 - Comment contents written by a standard user, tagged with Violence
 
