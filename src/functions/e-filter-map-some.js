@@ -33,21 +33,34 @@ console.log("has violence : ",hasViolence);
 
 // 4. See Reduce in demos
 
+// 4.bis concat all comments in one array
+
+const reducer = (memo, t)=>memo.concat(t.comments);
+const allComments = topics.reduce(reducer, []);
+console.log('all comments', allComments);
+
+console.log('all contents:',
+        topics
+            .reduce(reducer, [])
+            .map(c=>c.content) 
+);
+
 
 /*** Exercices :   ***/
 
-// 1 : sorted comment ids where penny wrote comments
+// 0 : sorted comment ids where penny wrote comments
 // Warning : some comments have no user
-
-const reducer = (memo, t)=>memo.concat(t.comments);
 
 var pennyIds = topics.reduce(reducer, [])
     .filter(comment => comment.user && comment.user.name === 'Penny')
     .map(c => c.id)
-    .sort( (id1, id2) =>  id1<id2 ? -1 : 1);
+    .sort( (id1, id2) =>  id1<id2 ? -1 : 1);  // WARNING !!!!!! For sets only
 
 console.log('Penny Ids : ', pennyIds);
 
-// 2. Comment contents written by a standard user, tagged with Violence
-// This kind of comment will be flagged by an admin
+// 1 - All Comment contents from Sheldon
+// 2 - All topic Ids with more than 4 comments
+// 3 - All Comment contents ordered by length DESC
+// 4 - All user names that are tagged with a ‘fun' or ‘violence' tag
+// 5 - Comment contents written by a standard user, tagged with Violence
 
