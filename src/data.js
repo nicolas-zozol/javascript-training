@@ -176,7 +176,7 @@ var topics = [
                 },
                 content: "Vinegar is not a spice, it's a fruit",
                 tags: [
-                    "science"
+                    "science", "violence"
                 ]
             },
             {
@@ -189,7 +189,7 @@ var topics = [
                 },
                 content: "A liquid fruit ? Doesn't make sense !",
                 tags: [
-                    "fun"
+                    "fun", "violence"
                 ]
             },
             {
