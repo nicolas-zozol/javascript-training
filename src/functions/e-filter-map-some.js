@@ -2,13 +2,13 @@ var topics = require('../data').topics;
 
 // 1. Filter topics written by Leonard
 var result = topics.filter(function (topic) {
-    return topic.user.name === "Leonard";
+    return false;
 });
 
 console.log("result --> ", result);
 
 // 1. The same with Fat arrow
-result = topics.filter(topic => topic.user.name === "Leonard");
+result = topics.filter(topic => false);
 
 
 // 2. Mapping some data: getting the title of each topic
@@ -22,10 +22,12 @@ console.log('titles --> ', titles);
 titles = topics.map(topic => topic.title);
 console.log('titles avec fat arrow -->', titles);
 
+// 2.bis) return titles written by Leonard
+
 
 // 3. Topics with tag violence
 var hasViolence = topics.some(function (topic) {
-    return topic.tags.includes("violence");
+    return false;
 });
 console.log("has violence : ",hasViolence);
 
@@ -36,7 +38,10 @@ console.log("has violence : ",hasViolence);
 
 // 1 : sorted comment ids where penny wrote comments
 // Warning : some comments have no user
-var pennyIds = topics.reduce((memo, t)=>memo.concat(t.comments), [])
+
+const reducer = (memo, t)=>memo.concat(t.comments);
+
+var pennyIds = topics.reduce(reducer, [])
     .filter(comment => comment.user && comment.user.name === 'Penny')
     .map(c => c.id)
     .sort( (id1, id2) =>  id1<id2 ? -1 : 1);
