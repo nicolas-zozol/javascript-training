@@ -17,12 +17,9 @@ Carnivore.prototype.eat = function (obj) {
 const tRex = new Carnivore();
 tRex.name =  "T Rex";
 
+// Try to eat
+
 //modification
 const eating = tRex.eat;
-eating(tRex);
+//eating(tRex);
 
-boundToDenver = eating.bind(denver);
-console.log('bound eating to denver : ');
-boundToDenver(tRex);
-
-eating.bind(denver)(tRex);

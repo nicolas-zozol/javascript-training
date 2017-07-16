@@ -13,34 +13,30 @@
 
 <h1>Connected users</h1>
 <section class="users">
-
+<ul></ul>
 </section>
-<h1> Rechercher des commentaires comportant le mot: </h1>
 
-<form onsubmit="displaySearchValue(); return false;">
-    <input type="search" class="search">
-    <button type="button">
-        Search
-    </button>
+<section class="topics">
+    <ul></ul>
+</section>
+
+
+<h1> Create a comment </h1>
+
+<form>
+
+    <button type="button">Add Comment</button>
 </form>
 
 <section class="search">
 </section>
 
-<h2>et la c'est fini h2</h2>
 
 
 </body>
 <script type="text/javascript" src="work.js"></script>
+<!-- then remove by Ajax -->
 <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="jQuery-event.js"></script>
-<script type="text/javascript" src="ajax.js"></script>
-
-<script type="text/javascript">
-//    const contents = search('it');
-//    contents.forEach(function (content) {
-//        const node = document.createTextNode(content);
-//        document.querySelector('body').appendChild(node);
-//    })
-</script>
+<script src="display-users.js"></script>
+<script src="display-topics.js"></script>
 </html>

@@ -207,72 +207,58 @@ var topics = [
     ]
   }
 ];
-// tests
-// Topic tiles where Sheldon wrote at least one comment
-
-const titles = topics.filter(topic => topic.comments.some(comment => comment.user.name === 'Sheldon'))
-                    .map( topic => topic.title);
-
-// console.log('titls : ', titles);  // good
-
-// Sorted ids from comments written by Penny
-
-const ids = [];
-
-topics.forEach(function(topic){
-    topic.comments.forEach(function(comment){
-        if (comment.user.name === 'Penny'){
-          ids.push(comment.id);
-        }
-    });
-});
-
-console.log('ids : ', ids);
 
 
-// Comment contents written by a non-admin user tagged by 'violence'
-
-
-function getCommentByTag(tag, isAdmin=false){
-  const contents = [];
-
-  topics.forEach(function(topic){
-
-    var group =topic.comments.filter(comment => comment.user.admin ===isAdmin && comment.tags && comment.tags.includes(tag));
-
-    group.forEach(comment => contents.push(comment.content));
-  });
-
-  return contents;
-}
-
-
-console.log('contents', getCommentByTag('fun'));
-
-
-function search(term){
-  var result = [];
-  topics.forEach(function(topic){
-    var group = topic.comments.filter(comment => comment.content.toLowerCase().includes(term.toLowerCase()));
-    result =  result.concat(group);
-  });
-
-  return result.map(comment => comment.content);
-}
-
-console.log('search', search('it'));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var users = [
+    {
+        admin: true,
+        id: 1,
+        email: "nz@robusta.io",
+        name: "Nicolas",
+        statement: "Star Wars rocks"
+    },
+    {
+        admin: true,
+        id: 2,
+        email: "leonard@robusta.io",
+        name: "Leonard",
+        statement: "Star Trek rocks"
+    },
+    {
+        admin: false,
+        id: 3,
+        email: "sheldon@robusta.io",
+        name: "Sheldon"
+    },
+    {
+        admin: false,
+        id: 4,
+        email: "raj@robusta.io",
+        name: "Rajesh"
+    },
+    {
+        admin: false,
+        id: 5,
+        email: "howie@robusta.io",
+        name: "Howard"
+    },
+    {
+        admin: true,
+        id: 6,
+        email: "penny@robusta.io",
+        name: "Penny",
+        statement: "Penny ! Penny ! Penny !"
+    },
+    {
+        admin: false,
+        id: 7,
+        email: "emy@robusta.io",
+        name: "Emy"
+    },
+    {
+        admin: false,
+        id: 28,
+        email: "bernie@robusta.io",
+        name: "Bernadette"
+    }
+];
