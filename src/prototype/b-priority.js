@@ -7,6 +7,9 @@ Dinosaurus.prototype.size = 20;
 
 const denver = new Dinosaurus('Denver');
 
+console.log(denver.size);
+console.log(denver.__proto__.size);
+
 // Explain priority between object and its (hidden) prototype
 // What if we dinamically change the prototype
     // - of course, it's not a good idea

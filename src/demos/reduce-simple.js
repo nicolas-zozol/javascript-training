@@ -7,28 +7,28 @@ function reducer ( memo, val){
 
 
 var result = numbers.reduce(reducer,0);
-console.log('number results', result);
-
 result = numbers.reduce(reducer,100);
-console.log('number results with initial value', result);
 
 
-var names = ["sheldon", "jo", "mary", "jules"];
-var nameResult =[];
+// console.log(result);
 
-for (var i = 0 ; i < names.length ; i++){
-    nameResult[i] = names[i]+" is cool "
-}
-console.log('result with for ', nameResult );
 
-// Do it with reduce and concat, with initial value at []
-// Do it with a map then a reduce
+const users = [{name:'Jo', money:1000}, {name:'Jack', money:100},
+    {name:'Jules', money:120}, {name:'Jane', money:2000}, {name:'Jim', money:80}];
 
 
 
 
+
+const sumReducer = (memo, element) => memo+element.money;
+const maxReducer = undefined;
+
+const reduceResult = users.reduce( sumReducer, 0);
+
+// Use the maxReducer
+// User map/reduce
 // Interesting point on reduce vs fold : http://stackoverflow.com/a/25158790/968988
-
+// Look at James Dean facts
 
 
 
