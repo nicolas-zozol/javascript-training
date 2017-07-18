@@ -1,10 +1,10 @@
 {
-  "name": "@marievincent/js-build",
-  "version": "1.0.1",
+  "name": "@robustacode/js-build",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/program/creation.js -o index.js",
+    "build": "browserify ...",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,7 +15,7 @@
   "author": "Nicolas",
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^13.1.1"
+
   },
   "dependencies": {
     "underscore": "^1.8.3"
