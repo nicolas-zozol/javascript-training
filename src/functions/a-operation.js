@@ -1,6 +1,6 @@
 // add, minus, div, mult opeations
 
-function print(){
+function add(){
     
 }
 
