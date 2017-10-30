@@ -20,7 +20,7 @@ var titles = topics.map(function (topic) {
 
 // 2. Same with fat arrow
 titles = topics.map(topic => topic.title);
-console.log('titles avec fat arrow -->', titles);
+//console.log('titles avec fat arrow -->', titles);
 
 // 2.bis) return titles written by Leonard
 
@@ -31,7 +31,7 @@ var hasViolence = topics.filter(function (topic) {
 });
 // console.log("has violence : ",hasViolence);
 
-// 4. See Reduce in demos
+// 4. After having see Reduce
 
 // 4.bis concat all comments in one array
 
@@ -53,7 +53,7 @@ const allContents = topics
 var pennyIds = topics.reduce(allCommentsReducer, [])
     .filter(comment => comment.user && comment.user.name === 'Penny')
     .map(c => c.id)
-    .sort((id1, id2) => id1 < id2 ? -1 : 1);  // WARNING !!!!!! For sets only
+    .sort((id1, id2) => id1 - id2);
 
 // console.log('Penny Ids : ', pennyIds);
 
